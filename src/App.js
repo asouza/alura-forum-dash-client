@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TopicVisualization from './TopicVisualization';
+
 class App extends Component {
 
   constructor(){
@@ -9,7 +10,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("didmount");
-    fetch('http://localhost:8080/sem-respostas').then((response) => {
+    fetch('http://localhost:8084/sem-respostas').then((response) => {
       return response.json();
     }).then((topics) => {
       this.setState({topics:topics.list});
