@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 export default class TopicVisulization extends Component {
 	render(){
-		const topics = this.props.data.map( topic => <tr>{topic.days}</tr>);
+		console.log(this.props.data);
+		const topics = this.props.data.map( topic => <tr key={topic.link}><td>{topic.days}</td></tr>);
 		return (
 			<table>
 				<tr>
